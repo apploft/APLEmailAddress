@@ -8,15 +8,17 @@
 
 import Foundation
 
-struct EmailAddressDetectorImpl: EmailAddressDetector {
-    func detect(_ emailString: String) -> [EmailAddress]? {
+public struct EmailAddressDetectorImpl: EmailAddressDetector {
+    public init() {}
+
+    public func detect(_ emailString: String) -> [EmailAddress]? {
         let emailAddresses = extractEmailAddresses(emailString)
         let validEmailAddresses: [EmailAddress]? = emailAddresses.compactMap({ EmailAddressImpl(validEmailString: $0) })
 
         return validEmailAddresses
     }
 
-    func detectSolely(_ emailString: String) -> EmailAddress? {
+    public func detectSolely(_ emailString: String) -> EmailAddress? {
         let emailAddresses = detect(emailString)
 
         if emailAddresses?.count == 1, let emailAddress = emailAddresses?.first?.asString {
