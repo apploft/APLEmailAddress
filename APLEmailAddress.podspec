@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "APLEmailAdress"
+  s.name         = "APLEmailAddress"
   s.version      = "0.0.1"
   s.summary      = "Implements  an EmailAddress Detector that returns instances EmailAddress containing valid email addresses"
 
