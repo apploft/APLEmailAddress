@@ -29,7 +29,7 @@ func detectSolely(_ emailString: String) -> EmailAddress?
 ```
 This is a convenience function that detects the first valid email-address within a given string, checks wether it is the only one and returns it in that case. 
 
-### EmailAddressDetector
+### EmailAddress
 EmailAddress is a protocol that implements the get-only property asString which returns the valid email-address as String.
 
 The protocol also implements Hashable, Equatable and CustomStringConvertible. 
